@@ -19,7 +19,7 @@ func moveZeroes(nums []int) {
 	for i := 0; i < len(nums); i++ {
 		if nums[i] == 0 {
 			count++
-		} else {
+		} else if count > 0 {
 			nums[i-count], nums[i] = nums[i], nums[i-count]
 		}
 	}
